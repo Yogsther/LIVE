@@ -2,8 +2,5 @@
 /.build
 /Packages
 /*.xcodeproj
-<<<<<<< HEAD
 /Source
-=======
-Source
->>>>>>> cf67527c3f6ef6f8f2a95dd1986b58f76eef41a9
+

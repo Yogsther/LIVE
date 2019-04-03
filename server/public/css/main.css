@@ -10,26 +10,126 @@ body{
 
 
 #wrap{
-    max-width: 900px;
+    max-width: 700px;
     width: 100%;
     background: rgb(56, 56, 56);
     display: block;
     margin: 0 auto;
     position: relative;
-    height: 100vh;
+    padding-bottom: 5em;
 }
 
 #logo-header{
-    height: 100%;
+    height: 90%;
+    position: relative;
+    top: 3px;
+    left: 5px;
+    cursor: pointer;
 }
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+  }
 
 
 #header{
     width: 100%;
-    height: 120px;
+    height: 60px;
     position: relative;
     margin: 0 auto;
     display: block;
     background: #222222;
-    border-bottom: solid 10px #fc2145;
+    border-bottom: solid 5px #fc2145;
+}
+
+#header-links{
+    position: relative;
+    display: block;
+    float: right;
+    top: 13px;
+    right: 15px;
+}
+
+.header-button{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.header-button:hover{
+    border-bottom: white 3px solid;
+}
+
+.stream-container{
+    width: 95%;
+    margin: 0 auto;
+    height: 400px;
+    margin-top: 2.5%;
+    background: rgba(34, 34, 34, 0.705);
+    position: relative;
+}
+
+.stream-image{
+    width: calc(65% - 1.5em);
+    left: 1em;
+    top: 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.chat-container{
+    width: calc(35% - 1.5em);
+    float: right;
+    right: 1em;
+    top: 1em;
+    display: block;
+    background: rgb(27, 27, 27);
+    position: relative;
+    height: calc(100% - 2em);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.info-box{
+    display: inline-block;
+    width: calc(65% - 1.5em);   
+    left: 1em; 
+    position: relative;
+    margin-top: 2em;
+    color: white;
+}
+
+.title{
+    font-size: 20px;
+    display: block;
+}
+
+.description{
+    font-size: 15px;
+    color: rgb(163, 163, 163);
+}
+
+.chat-input{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1em;
+    font-size: 15px;
+    background: rgb(235, 235, 235);
+    border: none;
+    padding: 1em;
+}
+
+*:focus {
+    outline: none;
 }

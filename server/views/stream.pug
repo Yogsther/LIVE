@@ -1,0 +1,12 @@
+extends layout
+block content
+    .stream-container
+      img.stream-image(src='img/1920x1080.png', alt='Video stream')
+      .chat-container
+        .messages
+        input.chat-input(type='text', placeholder='Chat [ENTER]')
+      .info-box
+        span.title Title of the stream
+        span.description
+          | Description goes here...
+        span.viewer-count
