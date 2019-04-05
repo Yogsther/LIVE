@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random color</title>
+</head>
+
+<body>
+
+
+    <div id="test"></div>
+    <script>
+        function populate() {
+            var elements = "";
+            while (elements.length < 500000) {
+                elements += "<div style='width:15px;height:15px;background: " + getRandomColor() +
+                    ";display:inline-block;margin:3px;'></div>";
+            }
+            document.getElementById("test").innerHTML = elements;
+        }
+
+        function getRandomColor() {
+            var color = "#";
+            for (i = 0; i < 6; i++) {
+                color += getRandom();
+            }
+
+            function getRandom() {
+                if (Math.random() > .5) return "ABCDEF" [Math.floor(Math.random() * 6)];
+                else return Math.floor(Math.random() * 10);
+            }
+            return color;
+        }
+
+        populate();
+    </script>
+</body>
+
+</html>

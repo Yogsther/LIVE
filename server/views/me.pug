@@ -1,0 +1,10 @@
+extends layout
+block content
+    div.me-page 
+        span#username Username
+        input#title(placeholder="Title of stream")
+        input#description(placeholder="Description of stream")
+        span#stream-key STREAM-KEY:
+            button(id="show-key", onclick="showKey(this)") SHOW KEY
+        button#save(onclick="save()") Save
+        button#logout(onclick="logout()") Logout

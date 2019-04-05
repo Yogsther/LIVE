@@ -14,8 +14,9 @@ import SocketIO
 class ViewController: NSViewController {
     
     let displayID = CGMainDisplayID()
-    var streaming: Bool = false;
-    var viewers: Int = 0;
+    var streaming: Bool = false
+    var viewers: Int = 0
+    var streamConfirmed: Bool = false;
     
     // Timestamp to keep track of fps
     var timeSinceLastFrame = Date().timeIntervalSinceReferenceDate
@@ -23,8 +24,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var width: NSTextField!
     @IBOutlet weak var height: NSTextField!
-    
-    
+
     @IBOutlet weak var initButton: NSButton!
     
     @IBOutlet weak var fps: NSTextField! // Input FPS
@@ -34,6 +34,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var key: NSTextField! // Stream key input field
     var loopTimer: Timer! // Loop
     
+    var manager = SocketManager(socketURL: URL(string: "http://localhost")!, config: [.log(false), .compress])
     
     
     @IBOutlet weak var statusText: NSTextField!
@@ -46,18 +47,14 @@ class ViewController: NSViewController {
     @IBAction func initStream(_ sender: Any) {
         streaming = !streaming;
         
-        
-        
+
         if(streaming){
-            var manager = SocketManager(socketURL: URL(string: "http://localhost")!, config: [.log(true), .compress])
-            let socket = manager.defaultSocket
-        
-            socket.on(clientEvent: .connect) {data, ack in
-                print("socket connected")
-            }
+            manager = SocketManager(socketURL: URL(string: ip.stringValue)!, config: [.log(false), .compress])
+            let socket = manager.defaultSocket;
+            socket.connect()
             
             initButton.title = "STOP STREAM"
-            loopTimer = Timer.scheduledTimer(timeInterval: 1/TimeInterval(Int(fps.stringValue)!)  , target: self, selector: #selector(loop), userInfo: nil, repeats: true)
+            loopTimer = Timer.scheduledTimer(timeInterval: 1/TimeInterval(Int(fps.stringValue)!), target: self, selector: #selector(loop), userInfo: nil, repeats: true)
         } else {
             initButton.title = "GO LIVE"
             loopTimer.invalidate()
@@ -70,9 +67,12 @@ class ViewController: NSViewController {
         let screenshot = NSImage(cgImage: (ref)!, size: NSZeroSize) // Convert captured image data
         let smallScreenshot = screenshot.resizeMaintainingAspectRatio(withSize: NSSize.init(width: Int(width.stringValue)!, height: Int(height.stringValue)!))
         
-      
         previewScreen.image = smallScreenshot
-        //var test = smallScreenshot!.base64String
+        let baseImg = smallScreenshot!.base64String
+        if !streamConfirmed {
+            manager.defaultSocket.emit("start_stream", key.stringValue)
+        }
+        manager.defaultSocket.emit("stream", baseImg!)
     }
 
     

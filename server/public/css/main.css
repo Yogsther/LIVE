@@ -4,7 +4,7 @@
 }
 
 body{
-    background: #1d1d1d;
+    background: rgb(36, 36, 36);
     margin: 0;
 }
 
@@ -12,11 +12,12 @@ body{
 #wrap{
     max-width: 700px;
     width: 100%;
-    background: rgb(56, 56, 56);
+    background: rgb(22, 22, 22);
     display: block;
     margin: 0 auto;
     position: relative;
     padding-bottom: 5em;
+    min-height: 500px;
 }
 
 #logo-header{
@@ -28,6 +29,7 @@ body{
 }
 
 img {
+    
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -44,7 +46,7 @@ img {
     position: relative;
     margin: 0 auto;
     display: block;
-    background: #222222;
+    background: #1b1b1b;
     border-bottom: solid 5px #fc2145;
 }
 
@@ -66,7 +68,7 @@ img {
 }
 
 .header-button:hover{
-    border-bottom: white 3px solid;
+    border-bottom: white 3px solid !important;
 }
 
 .stream-container{
@@ -79,12 +81,13 @@ img {
 }
 
 .stream-image{
-    width: calc(65% - 1.5em);
+    width: calc(100%);
     left: 1em;
     top: 1em;
     position: relative;
     display: inline-block;
-}
+    /* image-rendering: pixelated;
+} */
 
 .chat-container{
     width: calc(35% - 1.5em);
@@ -132,4 +135,117 @@ img {
 
 *:focus {
     outline: none;
+}
+
+.login-input{
+    border: none;
+    font-size: 1em;
+    padding: 1em;
+    display: block;
+    width: 25em;
+    margin: 1em;
+    border-bottom: #fc2145 5px solid;
+    background: none;
+    color: white;
+}
+
+#login-button{
+    border: none;
+    padding: 1em;
+    font-size: 1em;
+    display: block;
+    margin: 1em;
+    width: 10em;
+    cursor: pointer;
+    background: #202020;
+    color: white;
+    border-bottom: #fc2145 solid 5px;
+    border-radius: 0px;
+}
+
+.tiny-text{
+    color: rgb(233, 233, 233);
+    margin: 1em;
+    
+}
+
+.tiny-text > a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: #fc2145 4px solid;
+}
+
+.title{
+    margin: .5em;
+    font-size: 2em;
+    color: white;
+}
+
+
+.error-message{
+    display: block;
+    margin: 1em;
+    color: rgb(255, 30, 68);
+}
+
+.me-page{
+    color: white;
+    font-size: 2em;
+    display: block;
+    margin: 1em;
+}
+
+.me-page > input{
+    border: none;
+    background: none;
+    border-bottom: #fc2145 4px solid;
+    display: block;
+    margin-top: 1em;
+    font-size: .7em;
+    color: white;
+    width: 100%;
+}
+
+#stream-key{
+    display: block;
+    margin-top: 1em;
+    font-size: .8em;
+}
+
+#show-key{
+    border: none;
+    height: 30px;
+    top: -6px;
+    margin-left: 10px;
+    font-size: .8em;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border-bottom: #fc2145 4px dashed;
+}
+
+#logout, #save{
+    top: 10px;
+    border: none;
+    height: 30px;
+    font-size: .8em;
+    margin-right: 1em;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    color: white;
+    height: 1.4em;
+    border-bottom: #fc2145 4px dashed;
+}
+
+
+#title-stream{
+    font-size: 2em;
+    display: block;
+    margin-bottom: .2em;
+
 }

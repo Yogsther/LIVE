@@ -4,10 +4,16 @@
 
 ### Plattformen kommer bestå utav tre delar. En server som hanterar allting (JS, Node), en klient i Swift som används för att strömma (datorskärm och eller webcam) till serven och en HTML5 klient som kan visa och interagera med strömmarna.
 
+## Design
+
+Hemsidan kommer användas av dem som strömmar och dem som tittar. Det måste vara enkelt får begge, men framförallt för den som tittar. Ett enkelt system för att hitta en underhållande ström. Man ska inte behöva vara datakunnig för att börja strömma och det ska gå snabbt att komma igång.
+
+![Design scheme](resources/design.png)
+
 ## Server
 Skriven i Javascript med Node. Den kommer ta emot en ström från en klient som verifieras med en "Stream-key". Sedan skickar den vidare strömmen till alla som tittar på realtids-strömmen via webbläsaren. Tittare kan också interagera med strömmen genom en chat. Servern ska klara av oändligt med instanser av strömningar, men den kommer så klart sakta ner för varje ny instans.
 
-Servern kommer ansluta till en mySQL-databas för att hantera använderuppgifter. 
+Servern kommer ansluta till en mySQL-databas för att hantera användaruppgifter. 
 
 Databasen kommer ha ett table som heter users
 
@@ -34,9 +40,6 @@ När en användare börjar strömma kommer det skickas direkt till servern och d
 ```
 
 
-
-
-
 ## Klienten (Strömmare, Swift)
 
 Klienten kommer ha en simple GUI. Man ska kunna mata in sin stream-key, se hur många tittare man har och se en förhandsgranskning av strömmen.
@@ -57,4 +60,4 @@ Saker som jag vill göra om jag får tid till det:
  * Följa användare på sidan
  * Ljud support
  * Compression på strömmen
- * Webcam support och mer kontrol över det visuella som sänds
+ * Webcam support och mer kontroll över det visuella som sänds

@@ -1,0 +1,9 @@
+extends layout
+block content
+    span.title Login
+    input(placeholder="Username" id="username-input" type="text" class="login-input")
+    input(placeholder="Password" type="password" id="password-input" class="login-input")
+    button(id="login-button" onclick="login()") Login!
+    span.tiny-text Dont have an account? 
+        a(href="signup") Sign up here!
+    span.error-message#error

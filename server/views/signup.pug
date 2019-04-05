@@ -1,0 +1,9 @@
+extends layout
+block content
+    span.title Sign up
+    input(placeholder="Username (3-12, A-z0-9_)" oninput="validate(this)" maxlength="12" id="username-input" type="text" class="login-input")
+    input(placeholder="Password" type="password" maxlength="100" id="password-input" class="login-input")
+    button(id="login-button" onclick="signup()") Sign up!
+    span.tiny-text Already have an account? 
+        a(href="login") Login here!
+    span.error-message#error

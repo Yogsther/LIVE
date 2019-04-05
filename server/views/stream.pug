@@ -1,12 +1,12 @@
 extends layout
 block content
     .stream-container
-      img.stream-image(src='img/1920x1080.png', alt='Video stream')
+      img.stream-image#stream-img(src='img/1920x1080.png', alt='Video stream')
       .chat-container
         .messages
         input.chat-input(type='text', placeholder='Chat [ENTER]')
       .info-box
-        span.title Title of the stream
-        span.description
+        span.title-stream#title-stream Title of the stream
+        span.description#description-stream
           | Description goes here...
-        span.viewer-count
+        span.viewer-count#viewercount
