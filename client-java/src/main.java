@@ -8,6 +8,9 @@ public class main {
     public static void main(String[] args) throws URISyntaxException {
 
 
+        Socket socket = IO.socket("http://localhost");
+        socket.connect();
+
         System.out.println("Test");
         GUI gui = new GUI();
     }
