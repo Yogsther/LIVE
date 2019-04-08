@@ -12,7 +12,8 @@ html(lang='en')
   body
     #wrap
       #header
-        img#logo-header(src='img/logo-text-light.png', alt='' onclick="redir('home')")
+        a(href="/home")
+          img#logo-header(src='img/logo-text-light.png', alt='')
         span#header-links
       block content
     script(src='js/main.js')
