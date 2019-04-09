@@ -1,5 +1,4 @@
 const socket = io('http://' + location.hostname);
-var loc = window.location.href;
 var token = localStorage.getItem("token");
 var me;
 
@@ -8,7 +7,7 @@ if(token){
 }
 
 if(at("stream")){
-    socket.emit("watch_stream", loc.substr(loc.indexOf("?")+1))
+    socket.emit("watch_stream", location.href.substr(location.href.indexOf("?")+1))
 }
 
 socket.on("stream", img => {
@@ -62,8 +61,8 @@ renderButtons();
 
 
 function at(name) {
-    if (name == "index" && loc == "") return true;
-    if (loc.toLowerCase().indexOf(name.toLowerCase()) != -1) return true;
+    var path = location.pathname.substr(1);
+    if (path == name) return true;
     return false;
 }
 
