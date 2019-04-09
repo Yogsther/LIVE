@@ -87,8 +87,8 @@ img {
     top: 1em;
     position: relative;
     display: inline-block;
-    /* image-rendering: pixelated;
-} */
+    /* image-rendering: pixelated; */
+} 
 
 .chat-container{
     width: calc(35% - 1.5em);
