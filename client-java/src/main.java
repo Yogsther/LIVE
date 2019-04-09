@@ -18,6 +18,7 @@ public class main {
     public static boolean streaming = false;
     public static Timer t;
     public static TimerTask tt;
+    private static String lastImg;
 
     public static void main(String[] args) throws URISyntaxException, AWTException, IOException {
 
@@ -50,9 +51,12 @@ public class main {
 
                             final ByteArrayOutputStream os = new ByteArrayOutputStream();
                             ImageIO.write(img, "png", Base64.getEncoder().wrap(os)); // Convert to base65-string
-                            socket.emit("stream", os.toString(StandardCharsets.ISO_8859_1.name()));
-
-                            } catch (final IOException ioe) {
+                            String imageString = os.toString(StandardCharsets.ISO_8859_1.name());
+                            if(!imageString.equals(lastImg)) {
+                                socket.emit("stream", imageString);
+                                lastImg = imageString;
+                            }
+                        } catch (final IOException ioe) {
                         }
                     }
                 }

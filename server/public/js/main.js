@@ -2,23 +2,26 @@ const socket = io('http://' + location.hostname);
 var token = localStorage.getItem("token");
 var me;
 
+const HEADER_BUTTONS = [
+    {
+        title: "Download",
+        link: "download"
+    },{
+        title: "Login",
+        link: "login"
+    }
+]
+const HEADER_LINKS = document.getElementById("header-links");
+renderButtons(); 
+
+
 if(token){
     socket.emit("login", {token: token});
+    updateHomeLink(token.substr(0, token.indexOf("_")))
 }
 
-if(at("stream")){
-    socket.emit("watch_stream", location.href.substr(location.href.indexOf("?")+1))
-}
-
-socket.on("stream", img => {
-    document.getElementById("stream-img").src = img;
-})
-
-socket.on("stream_info", info => {
-    document.getElementById("title-stream").innerText = info.title;
-    document.getElementById("description-stream").innerText = info.description;
-    document.getElementById("viewercount").innerText = info.viewers;
-})
+// Live update debugging
+socket.on("reload_", () => {window.location.reload()});
 
 
 function login(){
@@ -37,28 +40,12 @@ function getCred(){
     }
 }
 
-const HEADER_BUTTONS = [
-    {
-        title: "Download",
-        link: "download"
-    },{
-        title: "Login",
-        link: "login"
-    }
-]
-
-const HEADER_LINKS = document.getElementById("header-links");
-
 function renderButtons(){
     HEADER_LINKS.innerHTML = ""; // Remove the links
     for(item of HEADER_BUTTONS){
         HEADER_LINKS.innerHTML += "<a href='" + item.link + "' " + (document.body.offsetWidth > 500 ? "style='margin-left:15px;'" : "") + " class='header-button'>" + item.title + "</a>"
     }
 }
-
-renderButtons();
-
-
 
 function at(name) {
     var path = location.pathname.substr(1);
@@ -78,10 +65,14 @@ socket.on("token", t => {
     redir("home");
 })
 
+function updateHomeLink(username){
+    document.getElementById("header-links").children[1].innerText = username
+    document.getElementById("header-links").children[1].href = "me"
+}
+
 socket.on("logged_in", data => {
     me = data;
-    document.getElementById("header-links").children[1].innerText = data.username
-    document.getElementById("header-links").children[1].href = "me"
+    updateHomeLink(data.username);
 
     if(at("me")){
         document.getElementById("title").value = me.title;
@@ -99,8 +90,10 @@ function save(){
 }
 
 function showKey(button){
-    button.remove();
-    document.getElementById("stream-key").innerText = me.stream_key
+    if(me){
+        button.remove();
+        document.getElementById("stream-key").innerText = me.stream_key
+    }
 }
 
 socket.on("err", err => {

@@ -35,7 +35,7 @@ var connection = mysql.createConnection(
     MYSQL_CONF
 );
 connection.connect();
-console.log("Connected to " + MYSQL_CONF.database)
+console.log("Connected to " + MYSQL_CONF.database + " database.")
 
 function err(message, socket) {
     socket.emit("err", message);
@@ -48,14 +48,14 @@ class Stream {
         this.user = user;
         this.start_time = Date.now();
         this.chat = [];
-        this.title = user.title;
-        this.description = user.description;
+        this.title = (user.title.trim().length > 0) ? user.title : "No title";
+        this.description = (user.description.trim().length > 0) ? user.description : "This stream has no description.";
         this.last_frame = "";
         this.viewers = []
     }
 }
 
-var streams = [];
+var streams = {};
 /* 
 function emitInfo(stream){
     for(user of users)
@@ -68,7 +68,6 @@ io.on('connection', socket => {
             if (streams[socket.id]) return;
             streams[socket.id] = new Stream(key, socket, user);
             socket.emit("stream_confirmed")
-            console.log(user.username + " started a stream!")
         })
     })
 
@@ -76,46 +75,60 @@ io.on('connection', socket => {
         img = "data:image/png;base64, " + img;
         if (streams[socket.id]) {
             var stream = streams[socket.id];
-            stream.last_frame = img;
-            console.log("Viewers ", stream.viewers)
             for (viewer of stream.viewers) {
                 io.to(viewer).emit("stream", img); // Send out stream images to viewers
-                console.log("Sent to user")
             }
         }
     })
 
     socket.on("watch_stream", name => {
-        console.log(streams.length)
+        var stream_info = false;
         for (stream in streams) {
             stream = streams[stream];
-            console.log(stream.user.username.toLowerCase(), name.toLowerCase(), stream.user.username.toLowerCase() == name.toLowerCase())
             if (stream.user.username.toLowerCase() == name.toLowerCase()) {
                 // Found the stream
                 if (stream.viewers.indexOf(socket.id) == -1) {
                     stream.viewers.push(socket.id); // New viewer
+                    updateViewers(stream);
                 }
-
-                socket.emit("stream_info", {
+                stream_info = {
                     title: stream.title,
                     description: stream.description,
-                    viewers: stream.viewers.length
-                })
+                    viewers: stream.viewers.length,
+                    live: true
+                };
+                socket.emit("stream_info", stream_info);
             }
+        }
+
+        if(!stream_info){
+            getUserUnsafe(name, user => {
+                stream_info = {
+                    title: (user.title.trim().length > 0) ? user.title : "No title",
+                    description: (user.description.trim().length > 0) ? user.description : "This stream has no description.",
+                    live: false,
+                    viewers: 0
+                };
+                socket.emit("stream_info", stream_info);
+            });
         }
     })
 
     socket.on("disconnect", () => {
         // Remove viewers and streamers
         for (stream in streams) {
-            stream = streams[stream];
-            if (stream.socket_id == socket.id) delete stream;
-            else
-                for (var i = 0; i < stream.viewers.length; i++) {
-                    if (stream.viewers[i] == socket.id) {
-                        stream.viewers.splice(i, 1);
+            if (streams[stream].socket_id == socket.id) {
+                updateViewers(streams[stream], true);
+                delete streams[stream];
+            }
+            else {
+                for (var i = 0; i < streams[stream].viewers.length; i++) {
+                    if (streams[stream].viewers[i] == socket.id) {
+                        streams[stream].viewers.splice(i, 1);
+                        updateViewers(streams[stream]);
                     }
                 }
+            }
         }
     })
 
@@ -194,23 +207,31 @@ io.on('connection', socket => {
 
     })
 
-
     socket.on("update", data => {
         getUserSafe(data.token, user => {
-            console.log("Starting query...")
             connection.query("UPDATE Users SET title = " + escape(data.title) + ", description = " + escape(data.description) + " WHERE upper(username) = " + escape(user.username).toUpperCase(), (error, results) => {})
         })
     })
-
-    // Updating records: UPDATE [table] SET [column] = '[updated-value]' WHERE [column] = [value];
-    // SET column1 = value1, column2 = value2, ...
-
-
-
-
-
     // END OF SOCKET
 });
+
+/**
+ * Updates all the viewer of the stream with new information.
+ * Mostly for updating viewer amount and live status. Not used for chat.
+ * @param {*} stream Stream to update 
+ * @param {boolean} end_of_stream If the stream has ended.
+ */
+function updateViewers(stream, end_of_stream){
+    stream_info = {
+        title: stream.title,
+        description: stream.description,
+        viewers: end_of_stream ? 0 : stream.viewers.length,
+        live: end_of_stream ? false : stream.live
+    };
+    for(viewer of stream.viewers){
+        io.to(viewer).emit("stream_info", stream_info)
+    }
+}
 
 function getUserSafe(token, _callback) {
     var username = token.substr(0, token.lastIndexOf("_"));
@@ -232,11 +253,35 @@ function getUserFromKey(key, _callback) {
     })
 }
 
+/**
+ * Get user from database, unsafe since no password for the user is required!
+ * @param {*} username Username of account to retrive
+ * @param {*} _callback Callback function
+ */
+function getUserUnsafe(username, _callback){
+    connection.query("SELECT * FROM Users WHERE upper(username) = " + escape(username.toUpperCase()), (error, results) => {
+        if (results) {
+            _callback(results[0]);
+        }
+    })
+}
 
+// Renderes pug files on save
 fs.watch("views", () => {
     render();
 })
 
+/* fs.watch("public", () => {reload()})
+fs.watch("public/js", () => {reload()})
+fs.watch("public/css", () => {reload()})
+
+function reload() {
+    //io.emit("reload")
+    for (socket of Object.keys(io.sockets.sockets)) {
+        io.to(socket).emit("reload_");
+    }
+}
+ */
 function render() {
     var files = fs.readdirSync("views");
 

@@ -11,14 +11,15 @@ body{
 
 
 #wrap{
-    max-width: 700px;
+    max-width: 900px;
     width: 100%;
     background: rgb(22, 22, 22);
     display: block;
     margin: 0 auto;
     position: relative;
     padding-bottom: 5em;
-    min-height: 500px;
+    min-height: 600px;
+    max-height: 100vh;
 }
 
 #logo-header{
@@ -72,23 +73,46 @@ img {
     border-bottom: white 3px solid !important;
 }
 
+
+#title-stream{
+    font-size: 2em;
+    display: inline-block;
+    margin-bottom: .2em;
+}
+
 .stream-container{
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
-    height: 400px;
-    margin-top: 2.5%;
-    background: rgba(34, 34, 34, 0.705);
+    padding-bottom: 2em;
     position: relative;
 }
 
 .stream-image{
-    width: calc(100%);
+    width: calc(65% - 1.5em);
     left: 1em;
     top: 1em;
     position: relative;
     display: inline-block;
-    /* image-rendering: pixelated;
-} */
+    border-bottom: 4px #fc2145 solid;
+} 
+
+.viewers-icon{
+    display: inline-block;
+    position: relative;
+    background: #292929;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 100px;
+}
+
+.viewer-count{
+    float: right;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    color: #aaaaaa;
+}
 
 .chat-container{
     width: calc(35% - 1.5em);
@@ -98,14 +122,14 @@ img {
     display: block;
     background: rgb(27, 27, 27);
     position: relative;
-    height: calc(100% - 2em);
     overflow-x: hidden;
     overflow-y: auto;
+    border-bottom: 4px #fc2145 solid;
 }
 
 .info-box{
     display: inline-block;
-    width: calc(65% - 1.5em);   
+    width: calc(100% - 2em);   
     left: 1em; 
     position: relative;
     margin-top: 2em;
@@ -118,6 +142,7 @@ img {
 }
 
 .description{
+    display: block;
     font-size: 15px;
     color: rgb(163, 163, 163);
 }
@@ -214,6 +239,7 @@ img {
     font-size: .8em;
 }
 
+
 #show-key{
     border: none;
     height: 30px;
@@ -244,9 +270,8 @@ img {
 }
 
 
-#title-stream{
-    font-size: 2em;
-    display: block;
-    margin-bottom: .2em;
-
+/* Front page, index */
+.index-page{
+    width: 90%;
+    margin: 0 auto;
 }

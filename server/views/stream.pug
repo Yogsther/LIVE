@@ -1,12 +1,19 @@
 extends layout
 block content
     .stream-container
-      img.stream-image#stream-img(src='img/1920x1080.png', alt='Video stream')
+      img.stream-image#stream-img(src='img/offline.png', alt='Video stream')
       .chat-container
         .messages
         input.chat-input(type='text', placeholder='Chat [ENTER]')
       .info-box
-        span.title-stream#title-stream Title of the stream
+        span.title-stream
+          .viewers-icon
+          span#title-stream No title
+        span.viewer-count
+          span#viewercount 0
+          |  Viewers
         span.description#description-stream
-          | Description goes here...
-        span.viewer-count#viewercount
+          | This stream has no description
+        
+block scripts
+  script(src="js/stream.js")
