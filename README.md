@@ -2,6 +2,7 @@
 
 ### Plattformen kommer bestå utav tre delar. En server som hanterar allting (JS, Node), en klient i Swift som används för att strömma (datorskärm och eller webcam) till serven och en HTML5 klient som kan visa och interagera med strömmarna.
 
+## [Loggbok](https://github.com/Yogsther/LIVE/wiki/Loggbok)
 
 ## Hur det funkar
 
