@@ -12,10 +12,19 @@ public class GUI extends JFrame {
     private static BufferedImage image = null;
     private static BufferedImage convertedImage = null;
     private static JPanel imagePreview;
-    private static JButton sendButton = new JButton();
+    public static JButton sendButton = new JButton();
     private static JTextField ip = new JTextField();
     private static JTextField key = new JTextField();
     private static BufferedImage placeholder;
+    private static JTextField widthInput = new JTextField();
+    private static JTextField heightInput = new JTextField();
+    private static JTextField compressionInput = new JTextField();
+    private static JLabel compressionLabel = new JLabel();
+    private static JLabel fpsLabel = new JLabel();
+    private static JTextField fpsInput = new JTextField();
+    private static JLabel x = new JLabel();
+    private static BufferedImage lastImg;
+
     public static boolean displayPreview = false;
 
     public GUI() throws IOException {
@@ -43,15 +52,18 @@ public class GUI extends JFrame {
                     try {
                         // Capture screenshot
                         image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-                        convertedImage = main.resizeImg(image, 384, 216); // Scale down image
+                        convertedImage = main.resizeImg(image, main.width, main.height); // Scale down image
                     } catch (AWTException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
 
                     double factor = (double) convertedImage.getHeight() / convertedImage.getWidth(); // How much shorter the height is than the width
 
                     // Draw preview of image
-                    g.drawImage(convertedImage, 0, 0, WINDOW_WIDTH, (int) Math.round(WINDOW_WIDTH * factor), null);
+                    g.drawImage(lastImg, 0, 0, WINDOW_WIDTH, (int) Math.round(WINDOW_WIDTH * factor), null);
+
                 } else {
                     double factor = (double) placeholder.getHeight() / placeholder.getWidth(); // How much shorter the height is than the width
                     g.drawImage(placeholder, 0, 0,  WINDOW_WIDTH, (int) Math.round(WINDOW_WIDTH * factor), null);
@@ -85,6 +97,33 @@ public class GUI extends JFrame {
         key.setBounds(10, 360, 465, 30);
         key.setText("KEY");
 
+        widthInput.setText("768");
+        heightInput.setText("432");
+        compressionInput.setText("0.5");
+
+        widthInput.setBounds(10, 400, 50, 30);
+        heightInput.setBounds(70, 400, 50, 30);
+        compressionInput.setBounds(220, 400, 50, 30);
+
+        compressionLabel.setText("Compression");
+        compressionLabel.setBounds(136, 389, 100, 50);
+
+        fpsLabel.setText("FPS");
+        fpsLabel.setBounds(280, 389, 50, 50);
+
+        fpsInput.setText("15");
+        fpsInput.setBounds(310, 400, 50, 30);
+
+        x.setText("x");
+        x.setBounds(61,398, 30, 30);
+
+        add(x);
+        add(fpsInput);
+        add(fpsLabel);
+        add(compressionLabel);
+        add(widthInput);
+        add(heightInput);
+        add(compressionInput);
         add(key);
         add(ip);
         add(sendButton);
@@ -92,11 +131,25 @@ public class GUI extends JFrame {
         setVisible(true);
     }
 
+    public static int[] getDimensions(){
+        int[] dimensions = {Integer.parseInt(widthInput.getText()), Integer.parseInt(heightInput.getText())};
+        return dimensions;
+    }
+
+    public static float getCompressionSetting(){
+        return Float.parseFloat(compressionInput.getText());
+    }
+
     public static String getKey(){
         return key.getText();
     }
 
     public static BufferedImage getImage() {
+        lastImg = convertedImage;
         return convertedImage;
+    }
+
+    public static int getFPS(){
+        return Integer.parseInt(fpsInput.getText());
     }
 }

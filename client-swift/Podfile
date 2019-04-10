@@ -1,5 +1,5 @@
 use_frameworks!
 
-target 'stream-client' do
+target 'LIVE' do
 pod 'Socket.IO-Client-Swift', '~> 15.0.0'
 end

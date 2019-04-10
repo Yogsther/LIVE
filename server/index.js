@@ -8,7 +8,6 @@ const md5 = require("md5")
 const escape = require("sqlstring").escape;
 
 render();
-//app.use(express.static(__dirname + '/public'));
 
 app.use(function (req, res, next) {
     if (req.url.indexOf("?") !== -1) {
@@ -72,7 +71,8 @@ io.on('connection', socket => {
     })
 
     socket.on("stream", img => {
-        img = "data:image/png;base64, " + img;
+        img = "data:image/jpg;base64, " + img;
+        console.log("SoS: " + Math.round(img.length/100)/10 + "kb");
         if (streams[socket.id]) {
             var stream = streams[socket.id];
             for (viewer of stream.viewers) {
@@ -162,6 +162,7 @@ io.on('connection', socket => {
         }
     })
 
+
     socket.on("login", cred => {
         if ((cred.password == undefined || cred.username == undefined) && cred.token == undefined) {
             err("Bad cred", socket);
@@ -233,6 +234,11 @@ function updateViewers(stream, end_of_stream){
     }
 }
 
+/**
+ * Get user from database. It's safe since the correct token (password) is required.
+ * @param {String} token Login token for the user you want (username_mp5(password))
+ * @param {Function} _callback Callback function that holds user
+ */
 function getUserSafe(token, _callback) {
     var username = token.substr(0, token.lastIndexOf("_"));
     var password = token.substr(token.lastIndexOf("_") + 1);
@@ -245,9 +251,14 @@ function getUserSafe(token, _callback) {
     })
 }
 
+/**
+ * Get user from their stream key
+ * @param {String} key Stream key of the user you want to get
+ * @param {Function} _callback Callback functions
+ */
 function getUserFromKey(key, _callback) {
     connection.query("SELECT * FROM Users WHERE stream_key = " + escape(key), (error, results) => {
-        if (results) {
+        if (results.length > 0) {
             _callback(results[0]);
         }
     })
@@ -255,8 +266,8 @@ function getUserFromKey(key, _callback) {
 
 /**
  * Get user from database, unsafe since no password for the user is required!
- * @param {*} username Username of account to retrive
- * @param {*} _callback Callback function
+ * @param {String} username Username of account to retrive
+ * @param {Function} _callback Callback function
  */
 function getUserUnsafe(username, _callback){
     connection.query("SELECT * FROM Users WHERE upper(username) = " + escape(username.toUpperCase()), (error, results) => {

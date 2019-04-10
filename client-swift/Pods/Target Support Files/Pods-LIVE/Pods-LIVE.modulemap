@@ -1,0 +1,6 @@
+framework module Pods_LIVE {
+  umbrella header "Pods-LIVE-umbrella.h"
+
+  export *
+  module * { export * }
+}

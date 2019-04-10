@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_stream_clientVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_stream_clientVersionString[];
+FOUNDATION_EXPORT double Pods_LIVEVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LIVEVersionString[];
 
