@@ -13,7 +13,7 @@ public class GUI extends JFrame {
     private static BufferedImage convertedImage = null;
     private static JPanel imagePreview;
     public static JButton sendButton = new JButton();
-    private static JTextField ip = new JTextField();
+    public static JTextField ip = new JTextField();
     private static JTextField key = new JTextField();
     private static BufferedImage placeholder;
     private static JTextField widthInput = new JTextField();
@@ -106,7 +106,7 @@ public class GUI extends JFrame {
         compressionInput.setBounds(220, 400, 50, 30);
 
         compressionLabel.setText("Compression");
-        compressionLabel.setBounds(136, 389, 100, 50);
+        compressionLabel.setBounds(130, 389, 100, 50);
 
         fpsLabel.setText("FPS");
         fpsLabel.setBounds(280, 389, 50, 50);

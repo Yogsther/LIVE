@@ -282,17 +282,6 @@ fs.watch("views", () => {
     render();
 })
 
-/* fs.watch("public", () => {reload()})
-fs.watch("public/js", () => {reload()})
-fs.watch("public/css", () => {reload()})
-
-function reload() {
-    //io.emit("reload")
-    for (socket of Object.keys(io.sockets.sockets)) {
-        io.to(socket).emit("reload_");
-    }
-}
- */
 function render() {
     var files = fs.readdirSync("views");
 

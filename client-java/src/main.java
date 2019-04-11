@@ -27,7 +27,7 @@ public class main {
     public static float compression;
     public static int fps;
 
-    public static void main(String[] args) throws URISyntaxException, AWTException, IOException {
+    public static void main(String[] args) throws IOException {
 
 
         GUI gui = new GUI();
@@ -39,7 +39,7 @@ public class main {
         if(streaming){
             // Start the stream
             // Connect socket
-            socket = IO.socket("http://localhost");
+            socket = IO.socket(GUI.ip.getText());
             socket.connect();
 
             width = GUI.getDimensions()[0];

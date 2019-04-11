@@ -22,6 +22,20 @@ body{
     max-height: 100vh;
 }
 
+.tight-wrap{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+    margin-top: 2em;
+}
+
+h1{
+    border-bottom: #fc2145 4px solid;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 #logo-header{
     height: 90%;
     position: relative;
@@ -274,4 +288,20 @@ img {
 .index-page{
     width: 90%;
     margin: 0 auto;
+}
+
+.download-button{
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: all .1s;
+    top: 0px;
+}
+
+.download-button:hover{
+    top: -4px;
+}
+
+.download-button:active{
+    top: 0px;
 }

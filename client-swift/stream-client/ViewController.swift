@@ -10,7 +10,6 @@ import Cocoa
 import SocketIO
 
 
-
 class ViewController: NSViewController {
     
     let displayID = CGMainDisplayID()
@@ -28,7 +27,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var initButton: NSButton!
     
     @IBOutlet weak var fps: NSTextField! // Input FPS
-
+    @IBOutlet weak var compression: NSTextField!
+    
     @IBOutlet weak var previewScreen: NSImageView! // The image field that displayes a preview of the stream
     @IBOutlet weak var ip: NSTextField! // Stream IP input field
     @IBOutlet weak var key: NSTextField! // Stream key input field
@@ -68,7 +68,8 @@ class ViewController: NSViewController {
         let smallScreenshot = screenshot.resizeMaintainingAspectRatio(withSize: NSSize.init(width: Int(width.stringValue)!, height: Int(height.stringValue)!))
         
         previewScreen.image = smallScreenshot
-        let baseImg = smallScreenshot!.base64String
+        let compressionValue: Float = Float(compression.stringValue) ?? 0
+        let baseImg = smallScreenshot!.base64String(compression: compressionValue)
         if !streamConfirmed {
             manager.defaultSocket.emit("start_stream", key.stringValue)
         }
@@ -79,7 +80,7 @@ class ViewController: NSViewController {
 }
 
 extension NSImage {
-    var base64String: String? {
+    func base64String(compression: Float) -> String? {
         guard let rep = NSBitmapImageRep(
             bitmapDataPlanes: nil,
             pixelsWide: Int(size.width),
@@ -101,8 +102,8 @@ extension NSImage {
         draw(at: NSZeroPoint, from: NSZeroRect, operation: .sourceOver, fraction: 1.0)
         NSGraphicsContext.restoreGraphicsState()
         
-        guard let data = rep.representation(using: NSBitmapImageRep.FileType.png, properties: [NSBitmapImageRep.PropertyKey.compressionFactor: 1.0]) else {
-            print("Couldn't create PNG")
+        guard let data = rep.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [NSBitmapImageRep.PropertyKey.compressionFactor: compression]) else {
+            print("Couldn't create JPG")
             return nil
         }
         
