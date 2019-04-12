@@ -7,6 +7,39 @@ const fs = require("file-system");
 const md5 = require("md5")
 const escape = require("sqlstring").escape;
 
+
+/* 
+request = require('request');
+
+var download = function(uri, filename, callback){
+  request.head(uri, function(err, res, body){
+    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+  });
+};
+
+var emotes = fs.readFileSync("emotes.json", "utf8")
+    emotes = JSON.parse(emotes);
+
+var emotes_ID = 0;
+
+downloadNext();
+
+function downloadNext(){
+    download(emotes[emotes_ID].src, "public/emotes/"+emotes[emotes_ID].name+".png", () => {
+        console.count("Downloaded")
+        emotes_ID++;
+        if(emotes_ID < emotes.length){
+            downloadNext();
+        } else console.log("Done!")
+    })
+}
+
+download('https://www.google.com/images/srpr/logo3w.png', 'google.png', function(){
+  console.log('done');
+}); */
+
+
+
 render();
 
 app.use(function (req, res, next) {

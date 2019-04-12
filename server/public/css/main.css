@@ -134,7 +134,7 @@ img {
     right: 1em;
     top: 1em;
     display: block;
-    background: rgb(27, 27, 27);
+    background: rgb(17, 17, 17);
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
@@ -293,15 +293,46 @@ img {
 .download-button{
     border-radius: 5px;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     transition: all .1s;
     top: 0px;
+    left: 0px;
 }
-
+/* 
 .download-button:hover{
     top: -4px;
 }
 
 .download-button:active{
     top: 0px;
+} */
+
+.download-button-link{
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.chat-username{
+    font-size: 16px;
+    color: #fc2145;
+    font-weight: 700;
+    font-family: Ubuntu;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.chat-content{
+    display: inline-block;
+}
+
+.message{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.messages{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100% - 3em);
 }
