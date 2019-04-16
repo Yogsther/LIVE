@@ -17,11 +17,12 @@ class DownloadButton {
         this.time = 0;
         this.mouseOver = false;
         this.DOM.addEventListener("mouseenter", e => this.changeColor(this.color))
-        this.DOM.addEventListener("mouseleave", e => this.changeColor(["3d3d3d", "383838"]))
-        this.oldColor = ["3d3d3d", "383838"];
+        this.DOM.addEventListener("mouseleave", e => this.changeColor(["111111", "111111"]))
+        this.oldColor = ["111111", "111111"];
         this.newColor = this.oldColor;
         this.colorTransition = 0;
-        
+
+
         this.link = document.createElement("a");
         this.link.href = location;
         this.link.appendChild(this.DOM);
@@ -37,11 +38,32 @@ class DownloadButton {
         this.colorTransition = 0;
     }
 
+    hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
+
     draw() {
         this.time += .5;
         var ctx = this.ctx;
-        ctx.fillStyle = "#212121"; // Background color
+        ctx.fillStyle = "black"; // Black background for darkening
         ctx.fillRect(0, 0, this.w, this.h);
+
+        var opacity = "99"; // 60%;
+        for (var i = 0; i < this.w; i++) {
+            // Draw gradient background but darker by using lower opacity.
+            var rainbow = new Rainbow();
+            rainbow.setNumberRange(0, this.w);
+            rainbow.setSpectrum(this.color[0], this.color[1]);
+            var rgb = this.hexToRgb(rainbow.colorAt(i));
+            ctx.fillStyle = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", 0.5)";
+            ctx.fillRect(i, 0, 1, this.h);
+
+        }
         
         for (var i = 0; i < this.w; i++) {
             if (typeof this.newColor == "object") {

@@ -27,8 +27,8 @@ app.get("*", function (req, res) {
 });
 
 // Connect to mysql
-// Edit mySQL.json to change
-const MYSQL_CONF = JSON.parse(fs.readFileSync("mySQL.json", "utf8"))
+// Edit MySQL.json to change
+const MYSQL_CONF = JSON.parse(fs.readFileSync("MySQL.json", "utf8"))
 var mysql = require('mysql');
 var connection = mysql.createConnection(
     MYSQL_CONF
@@ -55,10 +55,6 @@ class Stream {
 }
 
 var streams = {};
-/* 
-function emitInfo(stream){
-    for(user of users)
-} */
 
 io.on('connection', socket => {
 
@@ -119,12 +115,12 @@ io.on('connection', socket => {
         for (stream in streams) {
             if (streams[stream].socket_id == socket.id) {
                 updateViewers(streams[stream], true);
-                delete streams[stream];
+                delete streams[stream]; // Delete instance of stream once a streamer disconnects
             }
             else {
                 for (var i = 0; i < streams[stream].viewers.length; i++) {
                     if (streams[stream].viewers[i] == socket.id) {
-                        streams[stream].viewers.splice(i, 1);
+                        streams[stream].viewers.splice(i, 1); // Remove viewer from viewer-list in stream
                         updateViewers(streams[stream]);
                     }
                 }
