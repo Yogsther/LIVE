@@ -16,20 +16,41 @@ class DownloadButton {
         this.color = color;
         this.time = 0;
         this.mouseOver = false;
-        this.DOM.addEventListener("mouseenter", e => this.changeColor(this.color))
-        this.DOM.addEventListener("mouseleave", e => this.changeColor(["111111", "111111"]))
-        this.oldColor = ["111111", "111111"];
+        this.oldColor = ["3d3d3d", "383838"];
         this.newColor = this.oldColor;
         this.colorTransition = 0;
-
+        this.mouseOver = false;
 
         this.link = document.createElement("a");
         this.link.href = location;
         this.link.appendChild(this.DOM);
+        this.link.classList.add("download-button-link")
+        this.link.style.width = this.DOM.width + "px";
+        this.link.style.height = this.DOM.height + "px";
+        this.link.addEventListener("mouseenter", e => {
+            this.DOM.style.top = "-4px";
+            this.changeColor(this.color)
+            this.mouseOver = true;
+        })
+        this.link.addEventListener("mouseleave", e => {
+            this.DOM.style.top = "0px";
+            this.changeColor(["3d3d3d", "383838"])
+            this.mouseOver = false;
+        })
+
 
         setInterval(() => {
             this.draw();
         }, 16)
+    }
+
+    hexToRgb(hex, opacity = 1) {
+        var bigint = parseInt(hex, 16);
+        var r = (bigint >> 16) & 255;
+        var g = (bigint >> 8) & 255;
+        var b = bigint & 255;
+     
+        return "rgba(" + r + "," + g + "," + b + "," + opacity + ")";
     }
 
     changeColor(color) {

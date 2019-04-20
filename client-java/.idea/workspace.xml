@@ -7,32 +7,239 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5987d676-67a2-447f-8639-440b1c0bda04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/client_java_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/GUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/GUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/GUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-swift/stream-client/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/stream-client/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-swift/stream-client/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/stream-client/ViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/mySQL.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server/mySQL.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/me.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/me.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/stream.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/stream.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../server/views/layout.pug" afterDir="false" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/4Head.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ANELE.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/AngryJack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ArgieB8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ArigatoNas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ArsonNoSexy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/AsexualPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/AsianGlow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BCWarrior.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BabyRage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BatChest.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BegWan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BibleThump.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BigBrother.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BigPhish.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BisexualPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BlargNaut.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BlessRNG.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BloodTrail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BrainSlug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BrokeBack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/BuddhaBar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/CarlSmile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ChefFrank.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/CoolCat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/CoolStoryBob.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/CorgiDerp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/CrreamAwk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/CurseLit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DAESuppy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DBstyle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DansGame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DarkMode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DatSheffy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DendiFace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DogFace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DoritosChip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DrinkPurple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/DxCat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/EarthDay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/EleGiggle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/EntropyWins.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBBlock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBCatch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBChallenge.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBPass.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBPenalty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBRun.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBSpiral.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FBtouchdown.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FUNgineer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FailFish.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FrankerZ.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FreakinStinkin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/FutureMan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GayPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GenderFluidPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GingerPower.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GivePLZ.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GrammarKing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GreenTeam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/GunRun.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HSCheers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HSWP.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HappyJack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HassaanChop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HassanChop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HeyGuys.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HolidayCookie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HolidayLog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HolidayOrnament.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HolidayPresent.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HolidaySanta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HolidayTree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HotPokket.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/HumbleLife.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/IntersexPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/InuyoFace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ItsBoshyTime.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/JKanStyle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Jebaited.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/JonCarnage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KAPOW.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Kappa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KappaClaus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KappaPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KappaRoss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KappaWealth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Kappu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Keepo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KevinTurtle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Kippa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KomodoHype.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/KonCha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Kreygasm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/LUL.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/LesbianPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MVGame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Mau5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MaxLOL.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MercyWing1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MercyWing2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MikeHogu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MingLee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MorphinTime.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/MrDestructoid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/NinjaGrumpy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/NomNom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/NonBinaryPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/NotATK.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/NotLikeThis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/OSFrog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/OhMyDog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/OneHand.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/OpieOP.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/OptimizePrime.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PJSalt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PJSugar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PMSTwin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PRChase.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PanicVis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PansexualPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PartyHat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PartyTime.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PeoplesChamp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PermaSmug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PeteZaroll.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PeteZarollOdyssey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PicoMause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PinkMercy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PipeHype.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PixelBob.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PogChamp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Poooound.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PopCorn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PowerUpL.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PowerUpR.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PraiseIt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PrimeMe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PunOko.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PunchTrees.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/PurpleStar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RaccAttack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RalpherZ.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RedCoat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RedTeam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ResidentSleeper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RitzMitz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RlyTho.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/RuleFive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SMOrc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SSSsss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SabaPing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SeemsGood.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SeriousSloth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ShadyLulu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ShazBotstix.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SmoocherZ.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SoBayed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SoonerLater.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Squid1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Squid2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Squid3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/Squid4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/StinkyCheese.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/StoneLightning.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/StrawBeary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SuperVinlin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/SwiftRage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TBAngel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TF2John.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TPFufun.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TPcrunchyroll.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TTours.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TakeNRG.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TearGlove.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TehePelo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ThankEgg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TheIlluminati.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TheRinger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TheTarFu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TheThing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/ThunBeast.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TinyFace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TombRaid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TooSpicy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TransgenderPride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TriHard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TwitchLit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TwitchRPG.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TwitchUnity.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/TwitchVotes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/UWot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/UnSane.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/UncleNox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/VoHiYo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/VoteNay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/VoteYea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/WTRuck.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/WholeWheat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/WutFace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/YouDontSay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/YouWHY.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/bleedPurple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/cmonBruh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/copyThis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/duDudu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/imGlitch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/mcaT.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/panicBasket.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/pastaThat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/riPepperonis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/public/emotes/twitchRaid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/emotes.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/client-java/GUI$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/client-java/GUI$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/client-java/GUI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/client-java/main$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/client-java/main.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/index.js" afterPath="$PROJECT_DIR$/../server/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/package-lock.json" afterPath="$PROJECT_DIR$/../server/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/public/css/main.css" afterPath="$PROJECT_DIR$/../server/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/public/js/download.js" afterPath="$PROJECT_DIR$/../server/public/js/download.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/public/stream.html" afterPath="$PROJECT_DIR$/../server/public/stream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/views/stream.pug" afterPath="$PROJECT_DIR$/../server/views/stream.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,29 +247,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-596">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="544">
+              <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1561#2454#0" expanded="true" />
-                <element signature="e#2453#2454#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding>
-                <element signature="e#1880#3232#0" expanded="true" />
-                <element signature="e#3231#3232#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="464">
+              <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,6 +291,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -98,7 +305,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="988" />
@@ -111,8 +318,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,57 +362,117 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="Applet">
+  <component name="RunManager" selected="Application.main">
+    <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <module />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
-      <module name="client-java" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.1" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="client-java" />
+      <envs />
+    </configuration>
     <recent_temporary>
-      <list>
-        <item itemvalue="Application.main" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -218,79 +485,96 @@
       <option name="presentableId" value="Default" />
       <updated>1554903594991</updated>
       <workItem from="1554977922033" duration="846000" />
+      <workItem from="1554986734320" duration="417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="846000" />
+    <option name="totallyTimeSpent" value="1263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="988" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Capture Tool" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.1341853" />
-      <window_info id="Structure" order="5" weight="0.25" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.32921347" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.18638393" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="99" selection-start-line="99" selection-end-line="99" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="e#1880#3232#0" expanded="true" />
-            <element signature="e#3231#3232#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-596">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="544">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1561#2454#0" expanded="true" />
-            <element signature="e#2453#2454#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
