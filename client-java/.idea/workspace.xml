@@ -7,29 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5987d676-67a2-447f-8639-440b1c0bda04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/client_java_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/GUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/GUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/GUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client-java/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client-java/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-swift/stream-client/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/stream-client/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-swift/stream-client/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/stream-client/ViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/mySQL.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server/mySQL.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/me.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/me.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/public/stream.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/public/stream.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../server/views/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../client-swift/LIVE.xcworkspace/xcuserdata/olle.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="586">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,7 +87,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -123,6 +104,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,11 +195,13 @@
       <updated>1554903594991</updated>
       <workItem from="1554977922033" duration="846000" />
       <workItem from="1554986734320" duration="417000" />
+      <workItem from="1556008281904" duration="51000" />
+      <workItem from="1556009172438" duration="491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1263000" />
+    <option name="totallyTimeSpent" value="1805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="988" extended-state="0" />
@@ -226,7 +210,7 @@
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.13525027" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.1373802" />
       <window_info id="Structure" order="5" weight="0.25" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
@@ -235,7 +219,7 @@
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.18638393" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.18638393" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -268,8 +252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="586">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

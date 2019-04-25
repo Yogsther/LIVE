@@ -48,7 +48,7 @@ När en användare börjar strömma kommer det skickas direkt till servern och d
     Stream {
         streamer: User,
         viewers: SocketID[] ,
-        last_frame: PNG Image base64
+        last_frame: JPG Image base64
         title: String,
         description: String
     }

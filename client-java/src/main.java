@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageOutputStream;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -31,6 +32,16 @@ public class main {
 
 
         GUI gui = new GUI();
+
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (ClassNotFoundException
+                    | InstantiationException
+                    | IllegalAccessException
+                    | UnsupportedLookAndFeelException e) {
+                e.printStackTrace();
+            }
+
     }
 
     public static void toggleStream() throws URISyntaxException {
