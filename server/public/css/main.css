@@ -19,7 +19,7 @@ body{
     position: relative;
     padding-bottom: 5em;
     min-height: 600px;
-    max-height: 100vh;
+    height: calc(100vh - 80px);
 }
 
 .tight-wrap{
@@ -316,23 +316,31 @@ img {
 .chat-username{
     font-size: 16px;
     color: #fc2145;
-    font-weight: 700;
-    font-family: Ubuntu;
-    margin-bottom: 5px;
-    display: inline-block;
+    font-weight: 700 !important;
 }
 
 .chat-content{
     display: inline-block;
+    margin-top: -5px;
 }
 
 .message{
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    
 }
 
 .messages{
     overflow-x: hidden;
     overflow-y: auto;
     height: calc(100% - 3em);
+}
+
+.emote{
+    height: 30px;
+    margin-top: -10px;
+    top: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
 }
