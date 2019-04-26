@@ -9,7 +9,7 @@ socket.on("stream", img => {
 })
 
 socket.on("stream_info", info => {
-    stream = info.stream
+    if(info.stream) stream = info.stream
     document.getElementById("title-stream").innerText = info.title;
     document.getElementById("description-stream").innerText = info.description;
     if(info.viewers > 0){

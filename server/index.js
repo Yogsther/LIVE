@@ -131,10 +131,12 @@ io.on('connection', function (socket) {
     });
 
     socket.on("chat", info => {
+        console.log(info)
         getUserSafe(info.token, user => {
             for (var stream in streams) {
                 stream = streams[stream];
                 if (stream.user.username == info.stream) {
+                    console.log("Found strewam")
                     var message = info.message;    
                     if(message.length > 250) return;
                     if(message.trim().length < 1) return;
@@ -255,6 +257,7 @@ function updateViewers(stream, end_of_stream) {
  * @param {Function} _callback Callback function that holds user
  */
 function getUserSafe(token, _callback) {
+    if(!token) return;
     var username = token.substr(0, token.lastIndexOf("_"));
     var password = token.substr(token.lastIndexOf("_") + 1);
     connection.query("SELECT * FROM Users WHERE upper(username) = " + escape(username.toUpperCase()), function (error, results) {
@@ -278,7 +281,7 @@ function getUserFromKey(key, _callback) {
     });
 }
 /**
- * Get user from database, unsafe since no password for the user is required!
+ * Get user from database, unsafe since no password for the user is required
  * @param {String} username Username of account to retrive
  * @param {Function} _callback Callback function
  */
