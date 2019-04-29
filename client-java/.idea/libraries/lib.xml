@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/imageio-metadata-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-image-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lang-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/engine.io-client-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/imageio-core-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/socket.io-client-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/imageio-jpeg-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/okio-1.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20090211.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/okhttp-3.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-io-3.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

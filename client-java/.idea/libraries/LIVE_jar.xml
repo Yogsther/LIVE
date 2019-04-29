@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="LIVE_jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/LIVE_jar/client-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/LIVE_jar/LIVE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
