@@ -23,21 +23,23 @@ class DownloadButton {
 
         this.link = document.createElement("a");
         this.link.href = location;
+        this.link.setAttribute("download", "")
         this.link.appendChild(this.DOM);
         this.link.classList.add("download-button-link")
         this.link.style.width = this.DOM.width + "px";
         this.link.style.height = this.DOM.height + "px";
+        
         this.link.addEventListener("mouseenter", e => {
             this.DOM.style.top = "-4px";
             this.changeColor(this.color)
             this.mouseOver = true;
         })
+
         this.link.addEventListener("mouseleave", e => {
             this.DOM.style.top = "0px";
-            this.changeColor(["3d3d3d", "383838"])
+            this.changeColor(["111111", "383838"])
             this.mouseOver = false;
         })
-
 
         setInterval(() => {
             this.draw();
@@ -83,7 +85,6 @@ class DownloadButton {
             var rgb = this.hexToRgb(rainbow.colorAt(i));
             ctx.fillStyle = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", 0.5)";
             ctx.fillRect(i, 0, 1, this.h);
-
         }
         
         for (var i = 0; i < this.w; i++) {
@@ -125,6 +126,6 @@ class DownloadButton {
 }
 
 var javaButton = new DownloadButton("JAVA", "1.0", 200, 50, ["ff9335", "8c5728"], "distribute/LIVE.jar");
-var swiftButton = new DownloadButton("SWIFT", "1.0", 200, 50, ["ee3b29", "f3a43d"], "#")
+var swiftButton = new DownloadButton("SWIFT", "1.0", 200, 50, ["ee3b29", "f3a43d"], "distribute/LIVE.app")
 document.getElementById("download-button").appendChild(javaButton.link);
 document.getElementById("swift-button").appendChild(swiftButton.link);

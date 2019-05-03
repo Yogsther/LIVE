@@ -1,5 +1,4 @@
 "use strict";
-exports.__esModule = true;
 var express = require("express");
 var fs = require("file-system");
 var http = require("http");
@@ -21,10 +20,12 @@ app.use(function (req, res, next) {
     } else
         next();
 });
+
 app.use(express.static(__dirname + '/public'));
-app.get("*", function (req, res) {
+app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
+
 // Connect to mysql
 // Edit MySQL.json to change
 var MYSQL_CONF = JSON.parse(fs.readFileSync("MySQL.json", "utf8"));
@@ -44,8 +45,8 @@ for (var emote of tempEmotes) {
 }
 
 
-var Stream = /** @class */ (function () {
-    function Stream(key, socket, user) {
+class Stream {
+    constructor(key, socket, user) {
         this.chat = [];
         this.last_frame = "";
         this.viewers = [];
@@ -56,8 +57,8 @@ var Stream = /** @class */ (function () {
         this.title = (user.title.trim().length > 0) ? user.title : "No title";
         this.description = (user.description.trim().length > 0) ? user.description : "This stream has no description.";
     }
-    return Stream;
-}());
+}
+
 var streams = {};
 io.on('connection', function (socket) {
     socket.on("start_stream", function (key) {
@@ -131,15 +132,13 @@ io.on('connection', function (socket) {
     });
 
     socket.on("chat", info => {
-        console.log(info)
         getUserSafe(info.token, user => {
             for (var stream in streams) {
                 stream = streams[stream];
                 if (stream.user.username == info.stream) {
-                    console.log("Found strewam")
-                    var message = info.message;    
-                    if(message.length > 250) return;
-                    if(message.trim().length < 1) return;
+                    var message = info.message;
+                    if (message.length > 250) return;
+                    if (message.trim().length < 1) return;
                     for (var viewer of stream.viewers) {
                         io.to(viewer).emit("chat", {
                             message: message,
@@ -257,7 +256,7 @@ function updateViewers(stream, end_of_stream) {
  * @param {Function} _callback Callback function that holds user
  */
 function getUserSafe(token, _callback) {
-    if(!token) return;
+    if (!token) return;
     var username = token.substr(0, token.lastIndexOf("_"));
     var password = token.substr(token.lastIndexOf("_") + 1);
     connection.query("SELECT * FROM Users WHERE upper(username) = " + escape(username.toUpperCase()), function (error, results) {
@@ -312,4 +311,6 @@ function render() {
     }
 }
 render();
-server.listen(80);
+var port = 999;
+server.listen(port);
+console.log("Started LIVE on port: " + port)
