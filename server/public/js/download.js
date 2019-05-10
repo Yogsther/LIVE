@@ -125,7 +125,7 @@ class DownloadButton {
     }
 }
 
-var javaButton = new DownloadButton("JAVA", "1.0", 200, 50, ["ff9335", "8c5728"], "distribute/LIVE.jar");
-var swiftButton = new DownloadButton("SWIFT", "1.0", 200, 50, ["ee3b29", "f3a43d"], "distribute/LIVE.app")
+var javaButton = new DownloadButton("JAVA", "1.0", 200, 50, ["ff9335", "8c5728"], "https://github.com/Yogsther/LIVE/releases/download/1.0/LIVE.jar");
+var swiftButton = new DownloadButton("SWIFT", "1.0", 200, 50, ["ee3b29", "f3a43d"], "https://github.com/Yogsther/LIVE/releases/download/1.0/LIVE.app.zip")
 document.getElementById("download-button").appendChild(javaButton.link);
 document.getElementById("swift-button").appendChild(swiftButton.link);
