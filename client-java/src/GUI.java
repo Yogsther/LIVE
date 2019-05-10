@@ -92,7 +92,7 @@ public class GUI extends JFrame {
         });
 
         ip.setBounds(10, 320, 465, 30);
-        ip.setText("http://stream.ygstr.com");
+        ip.setText("http://live.ygstr.com");
 
         key.setBounds(10, 360, 465, 30);
         key.setText("KEY");
