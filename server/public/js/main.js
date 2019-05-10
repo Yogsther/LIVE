@@ -1,4 +1,4 @@
-const socket = io('http://' + location.hostname);
+const socket = io(location.protocol + "//" + location.hostname);
 var token = localStorage.getItem("token");
 var me;
 
@@ -19,10 +19,6 @@ if(token){
     socket.emit("login", {token: token});
     updateHomeLink(token.substr(0, token.indexOf("_")))
 }
-
-// Live update debugging
-socket.on("reload_", () => {window.location.reload()});
-
 
 function login(){
     cred = getCred();

@@ -25,7 +25,6 @@ app.use(express.static(__dirname + '/public'));
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
-
 // Connect to mysql
 // Edit MySQL.json to change
 var MYSQL_CONF = JSON.parse(fs.readFileSync("MySQL.json", "utf8"));
@@ -44,7 +43,7 @@ for (var emote of tempEmotes) {
     emotes.push(emote.substr(0, emote.indexOf(".")))
 }
 
-
+// Stream object
 class Stream {
     constructor(key, socket, user) {
         this.chat = [];
@@ -74,6 +73,7 @@ io.on('connection', function (socket) {
         //console.log("SoS: " + Math.round(img.length / 100) / 10 + "kb");
         if (streams[socket.id]) {
             var stream = streams[socket.id];
+                stream.last_frame = img;
             for (var _i = 0, _a = stream.viewers; _i < _a.length; _i++) {
                 var viewer = _a[_i];
                 io.to(viewer).emit("stream", img); // Send out stream images to viewers
@@ -114,6 +114,7 @@ io.on('connection', function (socket) {
             });
         }
     });
+
     socket.on("disconnect", function () {
         // Remove viewers and streamers
         for (var stream in streams) {
@@ -230,6 +231,22 @@ io.on('connection', function (socket) {
             connection.query("UPDATE Users SET title = " + escape(data.title) + ", description = " + escape(data.description) + " WHERE upper(username) = " + escape(user.username).toUpperCase(), function (error, results) {});
         });
     });
+
+    socket.on("get_streams", () => {
+        var emitStreams = []
+        for(var stream in streams){
+            stream = streams[stream];
+            emitStreams.push({
+                title: stream.title,
+                description : stream.description,
+                username: stream.user.username,
+                img: stream.last_frame,
+                viewers: stream.viewers.length
+            })
+        }
+        socket.emit("streams", emitStreams);
+    })
+
     // END OF SOCKET
 });
 /**
