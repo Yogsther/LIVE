@@ -4,9 +4,9 @@
 *Illustrerad bild, ej sann kvalité*
 
 
-[Loggbok](https://github.com/Yogsther/LIVE/wiki/Loggbok)
-
-[Plannering](PLANNERING.md)
+* [Loggbok](https://github.com/Yogsther/LIVE/wiki/Loggbok)
+* [Plannering](PLANNERING.md)
+* [JavaDocs](https://yogsther.github.io/LIVE/)
 
 LIVE är en hemsida är du kan direktsända din skärm över till andra.
 
