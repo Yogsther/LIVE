@@ -43,6 +43,10 @@ public class main {
 
     }
 
+    /**
+     * Initates a new stream
+     * @throws URISyntaxException
+     */
     public static void toggleStream() throws URISyntaxException {
         streaming = !streaming;
 
@@ -94,7 +98,14 @@ public class main {
         }
     }
 
-    // Resize and compress
+    /**
+     * Resizes and compresses a frame
+     * @param img Frame to be modified
+     * @param newW Preferred resized width
+     * @param newH Preferred resized height
+     * @return Resized image
+     * @throws IOException
+     */
     public static BufferedImage resizeImg(BufferedImage img, int newW, int newH) throws IOException {
         Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
         BufferedImage finalImg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB);

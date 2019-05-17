@@ -131,24 +131,44 @@ public class GUI extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Retrieve w,h from GUI
+     * @return Array with the dimensions [w,h]
+     */
     public static int[] getDimensions(){
         int[] dimensions = {Integer.parseInt(widthInput.getText()), Integer.parseInt(heightInput.getText())};
         return dimensions;
     }
 
+    /**
+     * Retrieve compression float from GUI
+     * @return compression-factor
+     */
     public static float getCompressionSetting(){
         return Float.parseFloat(compressionInput.getText());
     }
 
+    /**
+     * Get stream-key from GUI
+     * @return stream key
+     */
     public static String getKey(){
         return key.getText();
     }
 
+    /**
+     * Getter for last genereated frame
+     * @return Frame
+     */
     public static BufferedImage getImage() {
         lastImg = convertedImage;
         return convertedImage;
     }
 
+    /**
+     * Retrieve FPS from GUI
+     * @return preferred fps
+     */
     public static int getFPS(){
         return Integer.parseInt(fpsInput.getText());
     }
