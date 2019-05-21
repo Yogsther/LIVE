@@ -328,6 +328,15 @@ function render() {
     }
 }
 render();
-var port = 999;
+var port = 80;
+const ip = require("ip");
 server.listen(port);
-console.log("Started LIVE on port: " + port)
+console.log(`
+    __    _____    ________
+   / /   /  _/ |  / / ____/
+  / /    / / | | / / __/        Has started on
+ / /____/ /  | |/ / /___        port: ${port}
+/_____/___/  |___/_____/      
+
+    Visit ${ip.address()}                        
+`)

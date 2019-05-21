@@ -16,7 +16,7 @@ class DownloadButton {
         this.color = color;
         this.time = 0;
         this.mouseOver = false;
-        this.oldColor = ["3d3d3d", "383838"];
+        this.oldColor = ["111111", "111111"];
         this.newColor = this.oldColor;
         this.colorTransition = 0;
         this.mouseOver = false;
@@ -37,7 +37,7 @@ class DownloadButton {
 
         this.link.addEventListener("mouseleave", e => {
             this.DOM.style.top = "0px";
-            this.changeColor(["111111", "383838"])
+            this.changeColor(["111111", "111111"])
             this.mouseOver = false;
         })
 

@@ -29,7 +29,7 @@ En annan bugg som finns i Java klienten och Swift klienten är att när man änd
 
 Om du vill starta LIVE
 
-### Förutsättningar
+### Förutsättningar för server
 nodeJS, mySQL, NPM
 
 ### Installera servern
@@ -39,8 +39,10 @@ nodeJS, mySQL, NPM
 0. Importera LIVE.sql ```$ mysql live < LIVE.sql ```
 0. Navigera till /server
 0. Konfiguera MySQL.json till din mysql server
-0. ```$ npm install```
-0. ```$ sudo node index.js```
+0. Installera dependencies från NPM ```$ npm ci```
+0. Starta servern ```$ sudo node index.js```
+
+![](resources/cmd.png)
 
 ## Tester
 Så här ska det se ut när du är klar.
