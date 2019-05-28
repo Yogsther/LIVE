@@ -24,6 +24,27 @@ En bugg som uppkom nyligen under några senare tester är att om många strömma
 
 En annan bugg som finns i Java klienten och Swift klienten är att när man ändrar värden (framförallt medans man strömmar) så försvinner värdet från input-rutan. Just nu kan man också ändra värden som kompression och width, height medans du strömmar. Så länge man inte skriver in t.ex 0 i width eller height (eftersom programmet kraschar då) så funkar det okej.
 
+## Prestanda
+
+Jag inte har använt mig av någon slags MPEG kompression som använder sig av huvudbilder (I Frames) och sedan endast skickar information om hur pixlar rör sig (P Frames). Därför är min prestanda inte superbra. Det går att likna med en GIF, dem är väldigt komprimerande men är sparade bild-för-bild. I ström-klienten (Swift och Java) kan man ändra storlek på bilden, välja frame rate och hur mycket kompression man vill ha (kompressionen är JPG).
+
+Utan någon kompression, 1920x1080 blir varje bildruta ca 378.5KB stor. Om man då skulle strömma i 30FPS blir det 11.35 MB / sekund,vilket är ca 90Mb/s.
+
+Med en kompression på 0.7, 640x480 blir det ca 80KB / bildruta. Alltså vid 30FPS blir det 2.4 MB/sekund eller 19.2 Mb/s.
+
+## Validering och tillgänglighetstester
+### validator.w3.org (HTML)
+CLEAR
+
+### jigsaw.w3.org (CSS)
+Ett error, user-drag finns ej som attribut i taggen IMG. Den varnar också för alla -webkit och -moz versioner av user-drag. Jag vill fortfarande använda user-drag, och när den inte identifieras så ingoreras den bara av webbläsare.
+
+### WAVE (tillgänglighet)
+Ett error och en varning. 
+Erroret är att det saknas en alt-attribut på loggan, enkel fix.
+Varningen är att det inte finns någon struktur för användare utan css och javascript-stöd (No headdings)
+Detta är inte så viktigt eftersom hemsidan inte skulle fungera över huvudtaget utan CSS och Javascript. Ett sätt man kan
+hjälpa användare som saknar en modern och/eller fungerande webbläsare är att göra en javascript check-up när sidan laddas in genom att t.ex skicka en request via ajax till servern. Om den aldrig kommer fram kan man omdiregera användaren till en hjälpsida med tydfligt heading struktur.
 
 ## Installation
 
