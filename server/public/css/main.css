@@ -139,6 +139,7 @@ img {
     overflow-x: hidden;
     overflow-y: auto;
     border-bottom: 4px #fc2145 solid;
+    overflow: hidden;
 }
 
 .info-box{
@@ -316,7 +317,7 @@ img {
 .chat-username{
     font-size: 16px;
     color: #fc2145;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
 }
 
 .chat-content{
@@ -337,11 +338,11 @@ img {
 }
 
 .emote{
-    height: 30px;
     margin-top: -10px;
-    top: 7px;
-    margin-left: 5px;
-    margin-right: 5px;
+    top: 6px;
+    max-width: 40px;
+    margin-left: 1px;
+    margin-right: 1px;
     position: relative;
 }
 
@@ -388,4 +389,47 @@ img {
 a{
     text-decoration: none;
     color: white;
+}
+
+.emotes{
+    width: 100%;
+    max-height: calc(250px - 3em);
+    height: 0px;
+    position: absolute;
+    bottom: 3em;
+    left: 0px;
+    background: rgb(31, 31, 31);
+    transition: all .1s ease-in-out;
+    overflow: hidden;
+}
+
+.emote-preview{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+   /*  background: rgb(31, 31, 31); */
+    height: 40px;
+/* s */
+}
+
+.emote-preview:hover{
+    background: rgb(20, 20, 20);
+    cursor: pointer;
+}
+
+.emote-preview-img{
+    height: 30px;
+    top: 2.5px;
+    left: 2.5px;
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.emote-name{
+    position: relative;
+    top: -5px;
+    left: 5px;
+    color: #fc2145;
 }

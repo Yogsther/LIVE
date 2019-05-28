@@ -4,7 +4,8 @@ block content
       img.stream-image#stream-img(src='img/offline.png', alt='Video stream')
       .chat-container
         .messages
-        input.chat-input(type='text', placeholder='Chat [ENTER]')
+        div.emotes#emotes
+        input.chat-input(type='text', placeholder='Chat [ENTER]' oninput="emoteHelp(this)")
       .info-box
         span.title-stream
           .viewers-icon

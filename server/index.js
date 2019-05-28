@@ -37,11 +37,7 @@ function err(message, socket) {
     socket.emit("err", message);
 }
 
-var tempEmotes = fs.readdirSync("public/emotes");
-var emotes = new Array();
-for (var emote of tempEmotes) {
-    emotes.push(emote.substr(0, emote.indexOf(".")))
-}
+var emotes = JSON.parse(fs.readFileSync("emotes.json"))
 
 // Stream object
 class Stream {
@@ -52,6 +48,7 @@ class Stream {
         this.socket_id = socket.id;
         this.key = key;
         this.user = user;
+        this.live = true;
         this.start_time = Date.now();
         this.title = (user.title.trim().length > 0) ? user.title : "No title";
         this.description = (user.description.trim().length > 0) ? user.description : "This stream has no description.";
@@ -95,10 +92,12 @@ io.on('connection', function (socket) {
                     title: stream.title,
                     description: stream.description,
                     viewers: stream.viewers.length,
-                    live: true,
+                    live: stream.live,
                     stream: stream.user.username
                 };
                 socket.emit("stream_info", stream_info);
+                socket.emit("stream", stream.last_frame) // Emit the last frame for the new viewer
+                socket.emit("emotes", emotes)
             }
         }
         if (!stream_info) {
@@ -110,6 +109,7 @@ io.on('connection', function (socket) {
                     viewers: 0,
                     stream: user.username
                 };
+                socket.emit("emotes", emotes)
                 socket.emit("stream_info", stream_info);
             });
         }
@@ -140,6 +140,17 @@ io.on('connection', function (socket) {
                     var message = info.message;
                     if (message.length > 250) return;
                     if (message.trim().length < 1) return;
+
+                    for(var emote of emotes){
+                        while(message.indexOf(":" + emote.name + ":") != -1) message = message.replace(":" + emote.name + ":", "EMOTE=" + emote.src) 
+                    }
+
+                    for(var emote of emotes){
+                        while(message.indexOf(emote.name) != -1) message = message.replace(emote.name, "EMOTE=" + emote.src)
+                    }
+
+                   
+
                     for (var viewer of stream.viewers) {
                         io.to(viewer).emit("chat", {
                             message: message,
@@ -255,7 +266,7 @@ io.on('connection', function (socket) {
  * @param {*} stream Stream to update
  * @param {boolean} end_of_stream If the stream has ended.
  */
-function updateViewers(stream, end_of_stream) {
+function updateViewers(stream, end_of_stream = false) {
     var stream_info = {
         title: stream.title,
         description: stream.description,

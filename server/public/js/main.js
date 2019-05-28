@@ -93,6 +93,10 @@ function showKey(button){
 }
 
 socket.on("err", err => {
+    if(err == "Wrong password"){
+        localStorage.setItem("token", "")
+        window.href = ""
+    }
     console.warn("Err: " + err);
     try{
         document.getElementById("error").innerText = err;
